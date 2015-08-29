@@ -12,10 +12,15 @@
             android:label="@string/app_name" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
-
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity android:name=".InicioActivity" />
+        <activity android:name=".DashBoardActivity" />
+        <activity android:name=".UsuarioActivity" />
+        <activity android:name=".InstituicoesActivityList" />
+        <activity android:name=".DoacoesActivityList" />
+        <activity android:name=".MensagemActivity" />
     </application>
 
 </manifest>

@@ -3,4 +3,18 @@
 
     <string name="hello_world">Hello world!</string>
     <string name="action_settings">Settings</string>
+
+    <!-- Preferencias -->
+    <string name="preferencias">Preferencias</string>
+
+
+    <!-- Login -->
+    <string name="login">Login</string>
+    <string name="nome">Nome/Email</string>
+    <string name="senha">Senha</string>
+    <string name="entrar">Entrar</string>
+    <string name="erro_autenticacao">Erro ao logar</string>
+    <string name="manter_conectado">Manter Conectado</string>
+
+    <!-- Inicio -->
 </resources>
