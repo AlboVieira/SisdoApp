@@ -15,12 +15,19 @@ public class SisdoDao {
         helper = new DatabaseHelper(context);
     }
 
-    protected SQLiteDatabase getDb(){
+    //instancia unica do banco
+    public SQLiteDatabase getDb(){
         if (db == null){
             db = helper.getWritableDatabase();
         }
         return db;
     }
+
+    //insert
+
+    //delete
+
+    //lista
 
     public void close(){
         helper.close();

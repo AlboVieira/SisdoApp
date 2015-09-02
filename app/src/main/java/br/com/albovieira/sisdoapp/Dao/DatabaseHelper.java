@@ -26,10 +26,9 @@ public class DatabaseHelper extends SQLiteOpenHelper {
         queryPerfil.append("CREATE TABLE " + PerfilConst.nomeTabela);
         queryPerfil.append(" (");
         queryPerfil.append(PerfilConst.id + " INTEGER PRIMARY KEY,");
-        queryPerfil.append(PerfilConst.perfil + " TEXT,");
+        queryPerfil.append(PerfilConst.perfil + " TEXT");
         queryPerfil.append(" );");
         db.execSQL(queryPerfil.toString());
-
 
         StringBuilder queryUsuario = new StringBuilder();
         queryUsuario.append("CREATE TABLE " + UsuarioConst.nomeTabela);
@@ -38,11 +37,25 @@ public class DatabaseHelper extends SQLiteOpenHelper {
             queryUsuario.append(UsuarioConst.nome + " TEXT,");
             queryUsuario.append(UsuarioConst.email + " TEXT,");
             queryUsuario.append(UsuarioConst.senha + " TEXT,");
-            queryUsuario.append(" FOREIGN KEY("+ UsuarioConst.perfil +") " +
+            queryUsuario.append( UsuarioConst.perfil + " INTEGER," +
+                    " FOREIGN KEY("+ UsuarioConst.perfil + ") " +
                             "REFERENCES " + PerfilConst.nomeTabela + "("+PerfilConst.id+")");
         queryUsuario.append(" );");
         db.execSQL(queryUsuario.toString());
 
+
+    /*    StringBuilder queryDoacao = new StringBuilder();
+        queryDoacao.append("CREATE TABLE " + UsuarioConst.nomeTabela);
+        queryDoacao.append(" (");
+        queryDoacao.append(UsuarioConst.id + " INTEGER PRIMARY KEY,");
+        queryDoacao.append(UsuarioConst.nome + " TEXT,");
+        queryDoacao.append(UsuarioConst.email + " TEXT,");
+        queryDoacao.append(UsuarioConst.senha + " TEXT,");
+        queryDoacao.append(" FOREIGN KEY(" + UsuarioConst.perfil + ") " +
+                "REFERENCES " + PerfilConst.nomeTabela + "(" + PerfilConst.id + ")");
+        queryDoacao.append(" );");
+        //db.execSQL(queryDoacao.toString());
+*/
        /* db.execSQL("CREATE TABLE usuario (_id INTEGER PRIMARY KEY," +
                 " destino TEXT, tipo_viagem INTEGER, data_chegada DATE," +
                 " data_saida DATE, orcamento DOUBLE," +
