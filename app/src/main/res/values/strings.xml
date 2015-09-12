@@ -4,6 +4,9 @@
     <string name="hello_world">Hello world!</string>
     <string name="action_settings">Settings</string>
 
+    <!-- Action Bar -->
+    <string name="action_search">Buscar</string>
+
     <!-- Preferencias -->
     <string name="preferencias">Preferencias</string>
 
@@ -15,6 +18,8 @@
     <string name="entrar">Entrar</string>
     <string name="erro_autenticacao">Erro ao logar</string>
     <string name="manter_conectado">Manter Conectado</string>
+    <string name="cadastro">Cadastrar</string>
+    <string name="login"></string>
 
     <!-- Inicio -->
 </resources>
