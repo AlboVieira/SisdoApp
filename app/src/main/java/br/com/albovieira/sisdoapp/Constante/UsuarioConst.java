@@ -5,12 +5,14 @@ package br.com.albovieira.sisdoapp.Constante;
  */
 public class UsuarioConst {
 
-    public static final String nomeTabela = "usuario";
+    public static final String NOME_TABELA = "usuario";
 
-    public static final String id = "_id";
-    public static final String nome = "nomeUsuario";
-    public static final String email = "email";
-    public static final String senha = "senha";
-    public static final String perfil = "perfil_id";
+    public static final String ID = "_id";
+    public static final String NOME = "nomeUsuario";
+    public static final String EMAIL = "EMAIL";
+    public static final String SENHA = "SENHA";
+    public static final String PERFIL = "perfil_id";
 
+    public static final String[] COLUNAS = new String[]{
+            ID, NOME, EMAIL, SENHA, PERFIL};
 }

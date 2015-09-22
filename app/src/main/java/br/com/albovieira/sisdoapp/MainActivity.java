@@ -12,18 +12,15 @@ import android.widget.CheckBox;
 import android.widget.EditText;
 import android.widget.Toast;
 
-import br.com.albovieira.sisdoapp.Constante.UsuarioConst;
-import br.com.albovieira.sisdoapp.Dao.SisdoDao;
 import br.com.albovieira.sisdoapp.Dao.UsuarioDao;
 
 public class MainActivity extends AppCompatActivity {
 
     private static final String MANTER_CONECTADO = "manter_conectado";
-    private EditText usuario;
-    private EditText senha;
-    private CheckBox manterConectado;
 
     private SisdoDao dao;
+
+    private UsuarioDao dao;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -43,7 +40,6 @@ public class MainActivity extends AppCompatActivity {
 
         dao = new UsuarioDao(this);
         dao.getDb();
-
     }
 
     @Override
@@ -91,6 +87,9 @@ public class MainActivity extends AppCompatActivity {
 
     }
 
+    public void cadastrarUsuario(View v) {
+        startActivity(new Intent(this,CadastroUsuarioActivity.class));
+    }
 
 }
 

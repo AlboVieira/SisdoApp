@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+android:layout_width="match_parent"
+android:layout_height="match_parent"
+android:gravity="center_vertical"
+android:orientation="vertical"
+    android:weightSum="1">
+
+
+
+<TextView
+android:layout_width="wrap_content"
+android:layout_height="wrap_content"
+android:text="@string/nomeUsuario" />
+
+<EditText
+    android:id="@+id/nomeUsuario"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:inputType="text" >
+    <requestFocus />
+</EditText>
+
+<TextView
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:text="@string/emailUsuario" />
+
+<EditText
+    android:id="@+id/email"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:inputType="textEmailAddress" />
+
+
+<TextView
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:text="@string/senha" />
+
+<EditText
+    android:id="@+id/senha"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:inputType="textPassword" />
+
+<TextView
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:text="@string/confirmaSenha" />
+
+<EditText
+    android:id="@+id/confirmaSenha"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:inputType="textPassword" />
+
+
+<Button
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_gravity="bottom"
+    android:onClick="salvarUsuario"
+    android:text="@string/cadastrar" />
+
+</LinearLayout>

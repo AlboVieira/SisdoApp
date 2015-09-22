@@ -4,9 +4,6 @@
     <string name="hello_world">Hello world!</string>
     <string name="action_settings">Settings</string>
 
-    <!-- Action Bar -->
-    <string name="action_search">Buscar</string>
-
     <!-- Preferencias -->
     <string name="preferencias">Preferencias</string>
 
@@ -20,6 +17,12 @@
     <string name="manter_conectado">Manter Conectado</string>
     <string name="cadastro">Cadastrar</string>
     <string name="login"></string>
+    <string name="cadastrar">Cadastrar</string>
+
+    <!-- Novo Usuario -->
+    <string name="nomeUsuario">Nome</string>
+    <string name="emailUsuario">Email</string>
+    <string name="confirmaSenha">Confirma Senha</string>
 
     <!-- Inicio -->
 </resources>

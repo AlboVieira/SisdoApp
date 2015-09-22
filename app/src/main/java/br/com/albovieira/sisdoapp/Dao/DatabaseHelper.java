@@ -18,41 +18,41 @@ public class DatabaseHelper extends SQLiteOpenHelper {
     }
 
     //na primeira vez q o banco for acessado cria as tabelas
-    //se atentar para a coluna _id , o android espera q a chave primaria tenha esse nome
+    //se atentar para a coluna _id , o android espera q a chave primaria tenha esse NOME
     @Override
     public void onCreate(SQLiteDatabase db) {
 
         StringBuilder queryPerfil = new StringBuilder();
-        queryPerfil.append("CREATE TABLE " + PerfilConst.nomeTabela);
+        queryPerfil.append("CREATE TABLE " + PerfilConst.NOME_TABELA);
         queryPerfil.append(" (");
-        queryPerfil.append(PerfilConst.id + " INTEGER PRIMARY KEY,");
-        queryPerfil.append(PerfilConst.perfil + " TEXT");
+        queryPerfil.append(PerfilConst.ID + " INTEGER PRIMARY KEY,");
+        queryPerfil.append(PerfilConst.PERFIL + " TEXT");
         queryPerfil.append(" );");
         db.execSQL(queryPerfil.toString());
 
         StringBuilder queryUsuario = new StringBuilder();
-        queryUsuario.append("CREATE TABLE " + UsuarioConst.nomeTabela);
+        queryUsuario.append("CREATE TABLE " + UsuarioConst.NOME_TABELA);
         queryUsuario.append(" (");
-            queryUsuario.append(UsuarioConst.id + " INTEGER PRIMARY KEY,");
-            queryUsuario.append(UsuarioConst.nome + " TEXT,");
-            queryUsuario.append(UsuarioConst.email + " TEXT,");
-            queryUsuario.append(UsuarioConst.senha + " TEXT,");
-            queryUsuario.append( UsuarioConst.perfil + " INTEGER," +
-                    " FOREIGN KEY("+ UsuarioConst.perfil + ") " +
-                            "REFERENCES " + PerfilConst.nomeTabela + "("+PerfilConst.id+")");
+            queryUsuario.append(UsuarioConst.ID + " INTEGER PRIMARY KEY,");
+            queryUsuario.append(UsuarioConst.NOME + " TEXT,");
+            queryUsuario.append(UsuarioConst.EMAIL + " TEXT,");
+            queryUsuario.append(UsuarioConst.SENHA + " TEXT,");
+            queryUsuario.append( UsuarioConst.PERFIL + " INTEGER," +
+                    " FOREIGN KEY("+ UsuarioConst.PERFIL + ") " +
+                            "REFERENCES " + PerfilConst.NOME_TABELA + "("+PerfilConst.ID +")");
         queryUsuario.append(" );");
         db.execSQL(queryUsuario.toString());
 
 
     /*    StringBuilder queryDoacao = new StringBuilder();
-        queryDoacao.append("CREATE TABLE " + UsuarioConst.nomeTabela);
+        queryDoacao.append("CREATE TABLE " + UsuarioConst.NOME_TABELA);
         queryDoacao.append(" (");
-        queryDoacao.append(UsuarioConst.id + " INTEGER PRIMARY KEY,");
-        queryDoacao.append(UsuarioConst.nome + " TEXT,");
-        queryDoacao.append(UsuarioConst.email + " TEXT,");
-        queryDoacao.append(UsuarioConst.senha + " TEXT,");
-        queryDoacao.append(" FOREIGN KEY(" + UsuarioConst.perfil + ") " +
-                "REFERENCES " + PerfilConst.nomeTabela + "(" + PerfilConst.id + ")");
+        queryDoacao.append(UsuarioConst.ID + " INTEGER PRIMARY KEY,");
+        queryDoacao.append(UsuarioConst.NOME + " TEXT,");
+        queryDoacao.append(UsuarioConst.EMAIL + " TEXT,");
+        queryDoacao.append(UsuarioConst.SENHA + " TEXT,");
+        queryDoacao.append(" FOREIGN KEY(" + UsuarioConst.PERFIL + ") " +
+                "REFERENCES " + PerfilConst.NOME_TABELA + "(" + PerfilConst.ID + ")");
         queryDoacao.append(" );");
         //db.execSQL(queryDoacao.toString());
 */
