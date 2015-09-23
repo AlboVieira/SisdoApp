@@ -17,8 +17,9 @@ import br.com.albovieira.sisdoapp.Dao.UsuarioDao;
 public class MainActivity extends AppCompatActivity {
 
     private static final String MANTER_CONECTADO = "manter_conectado";
-
-    private SisdoDao dao;
+    private EditText nome, email, senha , usuario;
+    private CheckBox perfil,manterConectado;
+    private String id;
 
     private UsuarioDao dao;
 
